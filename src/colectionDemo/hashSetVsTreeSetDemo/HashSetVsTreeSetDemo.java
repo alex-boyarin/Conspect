@@ -5,7 +5,7 @@ import java.util.TreeSet;
 
 /* Performance-производительность у HashSet выше (Performance.HashSet is faster)
 В HashSet можно добавлять null.   (HashSet allows(позволяет) null object)
-HashSet использует equals() для сравнениния придобавлении обьектов но equals всегда должен быть переопределен в паре с
+HashSet использует equals() для сравнения при добавлении обьектов но equals всегда должен быть переопределен в паре с
 HashCode, TreeSet использует метод для сравнения compareTo. TreeSet -это упорядоченое множество,
 HashSet не упорядоченое. TreeSet более экономный с точки зрения использования памяти.*/
 public class HashSetVsTreeSetDemo {
@@ -20,7 +20,7 @@ public class HashSetVsTreeSetDemo {
         words.add("4y4");
         System.out.println(words);
         for (String element : words) {
-            System.out.print(element.hashCode() + " ");
+            System.out.print(element.hashCode() + ", ");
         }
         System.out.println("");
         TreeSet<String> treeSet = new TreeSet<>(words);

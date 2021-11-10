@@ -42,7 +42,7 @@ public class Person3 {
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Person3{" +
                 "personId=" + personId +
                 ", name='" + name + '\'' +
                 '}';

@@ -21,7 +21,7 @@ public class hashSetLinkedSetTreeSetDemo {
         set.add("d");
         set.add("h");
         System.out.println(set);
-        //Если нам нужен такой же порядок как при добавлении то тогда нужно использовать
+        //Если нам нужен такой же порядок как при добавлении, то тогда нужно использовать
         //LinkedHashSet<>
         Set<String> linkedSet = new LinkedHashSet<>();
         linkedSet.add("h");
@@ -30,19 +30,19 @@ public class hashSetLinkedSetTreeSetDemo {
         linkedSet.add("d");
         linkedSet.add("h");
         System.out.println(linkedSet);
-        //Если нам нужно чтобы элементы распологались в порядке возрастания то нужно
+        //Если нам нужно чтобы элементы располагались в порядке возрастания, то нужно
         //использовать реализацию TreeSet<>
         Set<String> treeSet = new TreeSet<>();
-        treeSet.add("h");
-        treeSet.add("b");
-        treeSet.add("kс");
-        treeSet.add("d");
+        treeSet.add("ha");
+        treeSet.add("aab");
+        treeSet.add("kaAс");
+        treeSet.add("da");
         treeSet.add("h");
         System.out.println(treeSet);
-//        System.out.println( set.add("a"));
-//        System.out.println(set.add("b"));
-//        System.out.println(set.add("cс"));
-//        System.out.println(set.add("d"));
-//        System.out.println(set.add("a"));
+        System.out.println(set.add("a"));//если элемента в колекц. нет то он добавиться и вернет true
+        System.out.println(set.add("b"));//если элемент уже есть то он не добавится и вернет false
+        System.out.println(set.add("cс"));
+        System.out.println(set.add("d"));
+        System.out.println(set.add("a"));
     }
 }

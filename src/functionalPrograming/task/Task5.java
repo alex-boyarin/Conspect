@@ -50,7 +50,7 @@ public class Task5 {
  * поэтому мы воспользуемся методом collect()  и сдесь у collect(Collectors.groupingBy(Person::getAge))
  * есть метод groupingBy() он принимает функцию которая на вход принимает Person и возращает
  * значение по которым нужно групировать, по сути это ключ и естественно ели ключ будет одинаковый
- * то в итоге мы получим несколько Person по одному и томуже ключу.
+ * то в итоге мы получим несколько Person по одному и тому же ключу.
  */
         Map<Integer, List<Person>> map = persons.stream()
                 .collect(groupingBy(Person::getAge));
@@ -76,7 +76,7 @@ public class Task5 {
          * нашего ключа т.е. где ключом например будет Integer а значение именно один обьект типа Person
          * Для этого мы просто вызовем Collect(toMap(Person::getAge, Function.identity())) тогда
          * мы можем сказать что ключом будет Person::getAge, а значение сам Person.
-         * Конечно это небудет работать если у нас не будет уникально ключа.
+         * Конечно это не будет работать если у нас не будет уникально ключа.
          */
         Map<Integer, Person> personMap = persons.stream()
                 .collect(toMap(Person::getAge, Function.identity()));

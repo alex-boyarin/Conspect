@@ -13,7 +13,7 @@ public class PropertiDemo {
         String value = properties.getProperty("abc");
         String valueDefault = properties.getProperty("xyz", "y-");
         System.out.println(value + " " + valueDefault);
-        properties.store(new FileWriter("data/message.properties"), "Comment prop");//Сохраним обьек  Properties в томже самом файле.
+        properties.store(new FileWriter("data/message.properties"), "Comment prop");//Сохраним обьект  Properties в том же самом файле.
 
     }
 }

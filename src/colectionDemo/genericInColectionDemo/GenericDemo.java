@@ -27,6 +27,6 @@ public class GenericDemo {
 
          */
         Person3 person3 = list.get(2);
-
+        System.out.println(person3);
     }
 }

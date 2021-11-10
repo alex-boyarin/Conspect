@@ -15,8 +15,9 @@ public class HashTableDemo {
         Hashtable<String, Integer> hashtable = new Hashtable<>();
         hashtable.put("aaa", 12);
         hashtable.put("sss", 41);
-        //hashtable.compute("cccc", (k, v) -> 77);
-        // hashtable.computeIfPresent("cccc", (k, v) -> v + k.length()); // Если присуствует элемент то он будет изменен.
+        hashtable.compute("cccc", (k, v) -> 77);//добавление
+        System.out.println(hashtable);
+        hashtable.computeIfPresent("cccc", (k, v) -> v + k.length()); // Если присуствует элемент то он будет изменен.
         hashtable.computeIfAbsent("cccc", v -> 11);// Если элемент отсуствует он будет добавлен, если присуствует
         // то никаких изменений не произойдет.
         System.out.println(hashtable);

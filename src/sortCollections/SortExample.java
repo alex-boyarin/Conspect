@@ -22,8 +22,9 @@ public class SortExample {
 //        System.out.println(personList);
 //        Collections.sort(personList,new FirstNameComparator());
 //        System.out.println(personList);
-//        personList.sort(new FirstNameComparator());
-        personList.sort(Comparator.comparing(Person::getFirstName).thenComparing(Person::getLastName));
+       personList.sort(new FirstNameComparator());
+
+        personList.sort(Comparator.comparing((Person person) -> person.getFirstName()).thenComparing(Person::getLastName));
         System.out.println(personList);
     }
 

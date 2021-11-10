@@ -12,7 +12,7 @@ import java.util.Properties;
 public class PropertiesDemo {
     public Properties loadFile(String filename) {
         Properties properties = new Properties();
-        properties.put("submit", "submit_A");// можно добавить улемент методом put.
+        properties.put("submit", "submit_A");// можно добавить элемент методом put.
 //        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(filename);
 //        try {
 //            properties.load(inputStream);// Можно загрузить сразу файл.

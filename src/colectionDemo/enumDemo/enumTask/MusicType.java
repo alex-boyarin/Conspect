@@ -8,7 +8,9 @@ package colectionDemo.enumDemo.enumTask;
  * Перечисление может содержать абстрактные методы,
  */
 public enum MusicType {
-    ROCK("-Гитара"), JAZZ("-Саксафон"), CLASSIC();
+    ROCK("-Гитара"),
+    JAZZ("-Саксафон"),
+    CLASSIC();
     private String realName;
 
     /*
@@ -17,7 +19,7 @@ public enum MusicType {
      * конструктор явным образом не вызывается, он вызывается при создании обьекта.
      * <p>
      * Перечисление имеет статическую природу, и при создании перечисления, создаются сразу все
-     * элементы перечтсления
+     * элементы перечисления
      */
     private MusicType() {
         //  System.out.println(this.name() + " " + this.ordinal());

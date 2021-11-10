@@ -3,8 +3,8 @@ package colectionDemo.comparableDemo;
 import java.util.TreeSet;
 
 /*
- * Интерфейс Comparable используется в случае если необходимо сравнивать обьекты целиком.
- * Он имеет непосредственное отношение к колекции, его можно использовать как основу для добавления
+ * Интерфейс Comparable используется в случае если необходимо сравнивать объекты целиком.
+ * Он имеет непосредственное отношение к коллекции, его можно использовать как основу для добавления
  * в сортированые множества. Больше всего для таких действий применяется comparator, т.к. когда у класса много
  * полей создается comparator для сортировки по каждому полю по отдельности, либо по необходимым полям.
  * Comparable предпологает сравнение обьектов целиком, т.к. имплементирует его сам класс. В этом случае
@@ -20,6 +20,9 @@ public class ComparableDemo {
         treeSet.add(new Person1("Misha", 125));
         treeSet.add(new Person1("Valodya", 54));
         treeSet.add(new Person1("Jak", 32));
-        System.out.println(treeSet);
+        treeSet.add(new Person1("Ja",32));
+        for (Person1 person1 : treeSet) {
+            System.out.println(person1);
+        }
     }
 }

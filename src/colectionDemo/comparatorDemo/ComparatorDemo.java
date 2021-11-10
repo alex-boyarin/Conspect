@@ -19,7 +19,10 @@ public class ComparatorDemo {
         //Comparator, интерфейс параметризуемый. Поэтому делаем параметризацию
         Collections.sort(list, new NamePersonComparator());// Второй вариант использования Comparator
         list.sort(new Person2.NameComparator());
-        System.out.println(list);
+        for (Person2 person2 : list) {
+            System.out.println(person2);
+        }
+
         /* Так же для реализации Comparator и для использ. логической связи, ипользуются static внутрение классы. в этом случае
         создается static внутрений класс.
          */

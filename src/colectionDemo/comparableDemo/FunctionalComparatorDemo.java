@@ -15,8 +15,10 @@ public class FunctionalComparatorDemo {
         list.add(new Person2(32, "Jak"));
         //list.sort((o1, o2) -> o1.getId()- o2.getId());//Использование лямда выражений.
         // Зачастую бывает необходимо выполнить одну сортировку внутри другой.
-        list.sort(Comparator.comparing(Person2::getName).thenComparing(Person2::getId));
-        System.out.println(list);
+        list.sort(Comparator.comparing((Person2 person2) -> person2.getName()).thenComparing(Person2::getId));
+        for (Person2 person2 : list) {
+            System.out.println(person2);
+        }
 
     }
 }
