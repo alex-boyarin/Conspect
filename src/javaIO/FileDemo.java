@@ -12,7 +12,7 @@ import java.time.ZoneId;
  */
 public class FileDemo {
     public static void main(String[] args) {
-        File file = new File("datap" + File.separator + "in.txt");
+        File file = new File("data" + File.separator + "in.txt");
         if (file.exists() && file.isFile()) {//file.exists-проверяет существует ли файл.
             //file.isFile-проверяет является ли он файлом (может быть файлом может быть дерикторией.
             System.out.println("path " + file.getPath());//получаем (Path-путь) к файлу.
@@ -26,7 +26,7 @@ public class FileDemo {
                 e.printStackTrace();
             }
         }
-        File dir = new File("datap");
+        File dir = new File("data");
         if (dir.exists() && dir.isDirectory()) {//dir.(exists-существует) ли дериктория.
             //dir.isDirectory-Проверяет явл. ли дериктория дерикторией
             for (File current : dir.listFiles()) {//(current-текущий, поток)

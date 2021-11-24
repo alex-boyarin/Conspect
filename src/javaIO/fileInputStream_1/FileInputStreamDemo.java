@@ -10,7 +10,7 @@ public class FileInputStreamDemo {
     public static void main(String[] args) {
         FileInputStream input = null;
         try {
-            input = new FileInputStream("data/in.txt");
+            input = new FileInputStream("in");
             int code = input.read();
             System.out.println(code + " = " + (char) code);
             byte[] array = new byte[10];

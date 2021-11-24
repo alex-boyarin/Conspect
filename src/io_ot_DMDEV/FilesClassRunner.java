@@ -15,10 +15,10 @@ import java.util.stream.Stream;
  */
 public class FilesClassRunner {
     public static void main(String[] args) throws IOException {
-        Path path = Path.of("resources", "writer3.poem");
+        Path path = Path.of("car");
         Files.write(path, List.of("hello world!", "java.")); // Также мы можем использовать этот класс и для записи в файл
 
-        Path path1 = Path.of("resources", "test.txt");
+        Path path1 = Path.of("car");
         try (Stream<String> stringStream = Files.lines(path1)) {
             stringStream.forEach(System.out::println);
         }

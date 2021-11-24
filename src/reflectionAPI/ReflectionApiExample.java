@@ -36,7 +36,7 @@ import java.lang.reflect.Modifier;
  * userClass.getConstructors()[0].getModifiers()-получаем модификаторы доступа, он нам возвращает цифру,
  * это побитовое число.
  * userClass.getEnclosingClass()-если это внутренниий или вложенный класса, то можем получить внешний.
- * userClass.getClassLoader()-это обьект класса ClassLoader которыйзагружает в JVM  обьект класса Class
+ * userClass.getClassLoader()-это обьект класса ClassLoader который загружает в JVM  обьект класса Class
  * как только он впервые встретит их в нашем приложении.
  * userClass.getPackageName()-получаем покет в котором находится наш класс.
  */
@@ -74,7 +74,7 @@ public class ReflectionApiExample {
 //    }
 
     /*
-    Так же у нашего класса мжно получить все Fields, вызывается через getDeclaredFields() мы можем
+    Так же у нашего класса можно получить все Fields, вызывается через getDeclaredFields() мы можем
     получить все его значения,т.е. даже не вызывая методы get() set() и тому подобное. Передадим в метод
     User user, теперь пройдем по каждому Field с помощью iterator. Вызываем declaredField.get(user),
     метод get() позволяет нам получить значение этого Field у обьекта которого мы передали, в данном случае

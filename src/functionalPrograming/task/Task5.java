@@ -38,7 +38,7 @@ public class Task5 {
          */
         persons.stream()
                 .filter(person -> person.getFullName().length() < 15)
-                .max(Comparator.comparing(Person::getAge))
+                .max(Comparator.comparing(person1 -> person1.getAge()))
                 .map(Person::getFullName)
                 .ifPresent(System.out::println);
 /**

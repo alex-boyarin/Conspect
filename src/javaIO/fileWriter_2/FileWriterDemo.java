@@ -12,9 +12,9 @@ import java.io.IOException;
  */
 public class FileWriterDemo {
     public static void main(String[] args) {
-        try (FileReader fileReader = new FileReader("data/in.txt");
+        try (FileReader fileReader = new FileReader("in");
              // Чтобы файл дозаписывался нужно добавить в конструктор true.
-             FileWriter fileWriter = new FileWriter("data/write.txt", true)) {
+             FileWriter fileWriter = new FileWriter("write", true)) {
             fileWriter.write("java");// добавился метод с параметрами String
             int symbol = fileReader.read();
             // мы знаем что считался код символа, но этот метод превратит его в символ

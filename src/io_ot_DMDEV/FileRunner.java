@@ -11,7 +11,7 @@ import java.io.IOException;
  */
 public class FileRunner {
     public static void main(String[] args) throws IOException {
-        File file = new File("resources/test.txt");
+        File file = new File("test.txt");
         System.out.println(file.exists());// проверяет есть ли такой файл или нет (если false то файла нет)
         System.out.println(file.isFile());//проверяет является ли файл файлом
         System.out.println(file.isDirectory());//проверяет является ли файл дерикторией
@@ -35,7 +35,7 @@ public class FileRunner {
         System.out.println(file.getAbsoluteFile());//получить абсолютный файл
         // file.delete();//удаление файла
         file.getAbsolutePath();//получить абсолютный путь
-        File dir = new File("resource/test/dir");/*
+        File dir = new File("resource/test/dir/");/*
         если файл представляет из себя не файл а дерикторию то
         при помощи метода mkdir() мы создадим эту дирректорию
         (если у нас дериктория находится внутри нескольких

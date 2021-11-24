@@ -9,11 +9,11 @@ import java.io.*;
 public class BufferedReaderWriterDemo {
     public static void main(String[] args) {
         // Так же используем try с ресурсами
-        try (FileReader fileReader = new FileReader("data/in.txt");
+        try (FileReader fileReader = new FileReader("in");
 //передаем в конструктор BufferedReader-а (fileReader)
              BufferedReader bufferedReader = new BufferedReader(fileReader);
 // Создаем поток записи  FileWriter("data/write2.txt");
-             FileWriter fileWriter = new FileWriter("data/write2.txt");
+             FileWriter fileWriter = new FileWriter("write2.txt");
 // Так же создаем BufferedWriter и передаем ему в конструктор (fileWriter)
              BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
 // Создаем переменную типа String и присваиваем ей чтение первой строки.
