@@ -1,7 +1,7 @@
 package javaCore.packageList;
 
 public class ListDemo<T> {
-    private T[] objects;
+    private final T[] objects;
     private int size;
 
     public ListDemo(int initialSize) {
