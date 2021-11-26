@@ -1,12 +1,14 @@
 package exampleJunit5.tests;
 
 import Taski.calculator.Calculator;
+import exampleJunit5.AnotherCondition;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+@ExtendWith(AnotherCondition.class)
 public class BaseTests {
     @Test
     public void testAssertTrueExample() {
