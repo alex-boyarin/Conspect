@@ -52,7 +52,7 @@ public class ParameterizedTests {
     @ArgumentsSource(CustomArgumentsProvider.class)// если мы хотим передать кастомный класс, то для этого
     //нужно писать свой провайдер для класса, он будет выглядеть как стрим обьектов
     public void testParameterizedCustomProvider(Calculator calculator) {
-        assertEquals(0, calculator.calculate('/'));
+        assertEquals(1,2);
     }
 
     private boolean isOdd(Number number) {
