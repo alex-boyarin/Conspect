@@ -100,12 +100,16 @@
             <artifactId>cucumber-java</artifactId>
             <version>7.1.0</version>
         </dependency>
-
         <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-testng</artifactId>
-            <version>7.1.0</version>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.13</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.cucumber</groupId>-->
+<!--            <artifactId>cucumber-testng</artifactId>-->
+<!--            <version>7.1.0</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -117,6 +121,11 @@
             <groupId>io.cucumber</groupId>
             <artifactId>gherkin</artifactId>
             <version>22.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.0.3</version>
         </dependency>
     </dependencies>
     <!--    <reporting>-->

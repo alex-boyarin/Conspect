@@ -1,3 +1,6 @@
+package browser_Language;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,16 +13,16 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class Language {
-    public static WebDriver driver;
+   // public static WebDriver driver;
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--lang=ru");
         System.setProperty("webdriver.chrome.driver", "C:\\webDriver\\chromedriver.exe");
-        // WebDriver driver = new ChromeDriver(chromeOptions);
-        driver = new ChromeDriver(chromeOptions);
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--lang=ja");//en-GB
+        WebDriver driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
-        driver.get("https://www.wikipedia.org");
+        driver.get("https://spotify.com");
 //        new WebDriverWait(driver, Duration.ofSeconds(10, 500)).withMessage("Can't find телевизоры")
 //                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@value='samsung']"))).click();
         // driver.findElement(By.xpath("//input[@value='samsung']")).click();
@@ -49,17 +52,17 @@ public class Language {
 //        driver.findElement(By.xpath("//label[text()='С доставкой']/span")).click();
 //        driver.quit();
     }
-
-    public static void selectCheckBox(String name) {
-        String rbXpath = "//label[text()='%s']/preceding-sibling::span";
-        if (!driver.findElement(By.xpath(String.format(rbXpath, name) + "/input")).isSelected())
-            driver.findElement(By.xpath(String.format(rbXpath, name))).click();
-    }
-
-    public static void deselectCheckBox(String name) {
-        String rbXpath = "//label[text()='%s']/preceding-sibling::span";
-        if (driver.findElement(By.xpath(String.format(rbXpath, name) + "/input")).isSelected())
-            driver.findElement(By.xpath(String.format(rbXpath, name))).click();
-    }
+//
+//    public static void selectCheckBox(String name) {
+//        String rbXpath = "//label[text()='%s']/preceding-sibling::span";
+//        if (!driver.findElement(By.xpath(String.format(rbXpath, name) + "/input")).isSelected())
+//            driver.findElement(By.xpath(String.format(rbXpath, name))).click();
+//    }
+//
+//    public static void deselectCheckBox(String name) {
+//        String rbXpath = "//label[text()='%s']/preceding-sibling::span";
+//        if (driver.findElement(By.xpath(String.format(rbXpath, name) + "/input")).isSelected())
+//            driver.findElement(By.xpath(String.format(rbXpath, name))).click();
+//    }
 
 }
