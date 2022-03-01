@@ -9,7 +9,7 @@ import org.junit.jupiter.api.*;
 public class OrderedTests {
     @Test()
     @DisplayName("a")//задаем кастомное имя, и потом MethodOrderer выбираем DisplayName.class
-    @Order(1)
+    @Order(1)//указываем приоритет выполнения тестов
     public void testExpectedException() {
         System.out.println("Test 1");
     }

@@ -5,7 +5,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class ParametersTest {
-    @Parameters({"test_parameter"})//параметр, который берется и xml файла
+    @Parameters({"test_parameter"})//параметр, который берется из xml файла
     @Test
     public void test(String param1) {
         System.out.println(param1);

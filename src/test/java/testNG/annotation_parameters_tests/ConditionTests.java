@@ -18,9 +18,9 @@ public class ConditionTests {
         System.out.println("I'm before class");
     }
 
-    @BeforeGroups(groups = {"test1","test2"})
+    @BeforeGroups(groups = {"test1", "test2"})
     public void test4() {
-        System.out.println("I'm before groups");
+        System.out.println("I'm before groups 1, 2 ");
     }
 
     @BeforeMethod(alwaysRun = true)
@@ -43,22 +43,24 @@ public class ConditionTests {
         System.out.println("I'm after class");
     }
 
-    @AfterGroups(groups = {"test1","test2"})
+    @AfterGroups(groups = {"test1", "test2"})
     public void test9() {
-        System.out.println("I'm after groups");
+        System.out.println("I'm after groups 1, 2");
     }
 
     @AfterMethod(alwaysRun = true)
     public void test10() {
         System.out.println("I'm after method");
     }
+
     @Test(groups = {"test1"})
-    public void test11()throws InterruptedException{
+    public void test11() throws InterruptedException {
         Thread.sleep(1000);
         System.out.println("I'm in test 1");
     }
+
     @Test(groups = {"test2"})
-    public void test12()throws InterruptedException{
+    public void test12() throws InterruptedException {
         Thread.sleep(1000);
         System.out.println("I'm in test 2");
     }

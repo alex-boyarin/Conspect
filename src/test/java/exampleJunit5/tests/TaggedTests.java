@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class TaggedTests {
     @Test
-    @Tag("Smoke")
+    @Tag("Smoke")//теги используются для настройки запуска определенных групп тестов, как указанно ниже
     public void testAssertTrueExample() {
         System.out.println("Smoke");
     }

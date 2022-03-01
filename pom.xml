@@ -30,6 +30,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
+<!--                    <groups>Smoke</groups>группы тестов которые пойдут на запуск-->
+<!--                    <excludedGroups>System</excludedGroups> группы тестов которые не пойдут на запуск-->
                 </configuration>
             </plugin>
             <plugin>
@@ -114,6 +116,7 @@
             <artifactId>httpclient</artifactId>
             <version>4.5.13</version>
         </dependency>
+
 <!--        <dependency>-->
 <!--            <groupId>io.cucumber</groupId>-->
 <!--            <artifactId>cucumber-testng</artifactId>-->

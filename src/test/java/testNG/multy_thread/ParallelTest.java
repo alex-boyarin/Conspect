@@ -7,8 +7,8 @@ public class ParallelTest {
     //invocationCount-кол-во вызовов метода
     //timeOut -время за которое должен выполн. метод, иначе он упадет
     @Test(threadPoolSize = 4, invocationCount = 1000, timeOut = 500)
-    public void testMethod(){
-        long id=Thread.currentThread().getId();
-        System.out.println("Test method executing on thread with id: "+id);
+    public void testMethod() {
+        long id = Thread.currentThread().getId();
+        System.out.println("Test method executing on thread with id: " + id);
     }
 }
