@@ -13,14 +13,15 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class Language {
-   // public static WebDriver driver;
+    public static WebDriver driver;
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         System.setProperty("webdriver.chrome.driver", "C:\\webDriver\\chromedriver.exe");
         WebDriverManager.chromedriver().setup();
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--lang=ja");//en-GB
+        chromeOptions.addArguments("--lang=ru");//en-GB
         WebDriver driver = new ChromeDriver(chromeOptions);
+        //driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://spotify.com");
 //        new WebDriverWait(driver, Duration.ofSeconds(10, 500)).withMessage("Can't find телевизоры")

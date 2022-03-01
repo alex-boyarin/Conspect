@@ -25,13 +25,19 @@ public class ParameterizedEnumTest {
 
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
-        Object[][] data = new Object[][]{{APRIL, MAY}, {JULY, JANUARY}, {AUGUST, SEPTEMBER}};
+        Object[][] data = new Object[][]{
+                {Months.APRIL, Months.MAY},
+                {Months.JULY, Months.JANUARY},
+                {Months.AUGUST, null}};
         return Arrays.asList(data);
     }
 
     @Parameterized.Parameters
     public static Collection<Object[]> data1() {
-        Object[][] data1 = new Object[][]{{JANUARY, FEBRUARY}, {JULY, OCTOBER}, {NOVEMBER, DECEMBER}};
+        Object[][] data1 = new Object[][]{
+                {Months.JANUARY, Months.FEBRUARY},
+                {Months.JULY, Months.OCTOBER},
+                {Months.NOVEMBER, Months.DECEMBER}};
         return Arrays.asList(data1);
     }
 

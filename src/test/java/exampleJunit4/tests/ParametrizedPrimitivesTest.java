@@ -1,14 +1,17 @@
 package exampleJunit4.tests;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
 import java.util.Collection;
-
-import static org.junit.Assert.*;
+/** Для того чтобы в Junit4 параметризовать тесты нужно в Аннотации @RunWith(Parameterized.class) указать
+ * класс Parameterized.class, далее если нам нужно делаем конструктор,
+ * и помечаем метод который возвращает коллекцию обьектов Аннотацией @Parameterized.Parameters
+ * Эта конструкция характерна для примитивов. Но если нужно работать с обьектами то смотрите ниже пример.
+ */
+import static org.junit.Assert.assertEquals;
 @RunWith(Parameterized.class)
 public class ParametrizedPrimitivesTest {
     private String str1;

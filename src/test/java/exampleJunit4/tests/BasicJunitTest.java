@@ -6,8 +6,10 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-@RunWith(ExampleRunner.class)
-public class BasicJunitTest {
+@RunWith(ExampleRunner.class)//При использовании нестандартного ранера нужно указывать в обьявлении
+// тестового класса анотацию @RunWith(классРанена.class)
+//смотреть описание действий в ExampleListener и ExampleRunner
+public class BasicJunitTest {//класс заканчивается на Test
     @Test
     public void testAssertTrueExample() {
         assertTrue(5 > 3);

@@ -11,6 +11,7 @@ public class ArrayDequeDemo {
     public static void main(String[] args) {/* Если использовать ArrayDeque в качестве stack это более
      выгодно с точки зрения скорости чем использования синхр. класса Stream*/
         ArrayDeque<Integer> stack = new ArrayDeque<>();//stack перевый зашел последний вышел.
+        
         stack.push(1);//добавление элементов.
         stack.push(2);
         stack.push(3);
