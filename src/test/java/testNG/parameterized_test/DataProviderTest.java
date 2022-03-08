@@ -31,6 +31,7 @@ public class DataProviderTest {
 
     @Test(dataProvider = "data2")
     public void test(int a, int b, int c) {
+        System.out.println(this);
         assertEquals(a + b, c, "Incorrect operation result");
     }
 

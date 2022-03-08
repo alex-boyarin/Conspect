@@ -2,9 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Parameters suite">
-    <parameter name="suite_parameter" value="suite"/>
+    <parameter name="suite_parameter" value="Suite данные передаваемые в тестовый метод"/>
     <test name="Parameters tests">
-        <parameter name="test_parameter" value="test"/>
+        <parameter name="test_parameter" value="Test данные передаваемые в тестовый метод"/>
         <classes>
             <class name="testNG.parameterized_test.ParametersTest"/>
         </classes>

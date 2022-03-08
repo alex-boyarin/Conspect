@@ -11,7 +11,7 @@ public class ParametersTest {
         System.out.println(param1);
     }
 
-    @Parameters({"suite_parameter"})
+    @Parameters({"suite_parameter"})//параметр, который берется из xml файла
     @Test
     public void test1(@Optional("should be suite, but optional") String param2) {
         System.out.println(param2);
