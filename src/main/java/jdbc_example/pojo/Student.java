@@ -1,36 +1,29 @@
 package jdbc_example.pojo;
 
+import lombok.*;
+
 import java.util.Objects;
 
+
 public class Student {
-    private int studentId;
+    private int id;
     private String name;
-    private String lastName;
-    private double averageGrade;
-    private int classId;
+    private String last_name;
+    private double average_grade;
 
-    public Student(int studentId, String name, String lastName, double averageGrade, int classId) {
-        this.studentId = studentId;
+    public Student(int id, String name, String last_name, double average_grade) {
+        this.id = id;
         this.name = name;
-        this.lastName = lastName;
-        this.averageGrade = averageGrade;
-        this.classId = classId;
+        this.last_name = last_name;
+        this.average_grade = average_grade;
     }
 
-    public int getClassId() {
-        return classId;
+    public int getId() {
+        return id;
     }
 
-    public void setClassId(int classId) {
-        this.classId = classId;
-    }
-
-    public int getStudentId() {
-        return studentId;
-    }
-
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -41,20 +34,20 @@ public class Student {
         this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLast_name() {
+        return last_name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
 
-    public double getAverageGrade() {
-        return averageGrade;
+    public double getAverage_grade() {
+        return average_grade;
     }
 
-    public void setAverageGrade(double averageGrade) {
-        this.averageGrade = averageGrade;
+    public void setAverage_grade(double average_grade) {
+        this.average_grade = average_grade;
     }
 
     @Override
@@ -62,22 +55,21 @@ public class Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return studentId == student.studentId;
+        return id == student.id && Double.compare(student.average_grade, average_grade) == 0 && name.equals(student.name) && last_name.equals(student.last_name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(studentId, name,lastName,classId,averageGrade);
+        return Objects.hash(id, name, last_name, average_grade);
     }
 
     @Override
     public String toString() {
         return "Student{" +
-                "studentId=" + studentId +
-                ", name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", averageGrade=" + averageGrade +
-                ", classId=" + classId +
-                '}';
+               "id=" + id +
+               ", name='" + name + '\'' +
+               ", last_name='" + last_name + '\'' +
+               ", average_grade=" + average_grade +
+               '}';
     }
 }

@@ -1,6 +1,11 @@
 package jdbc_example;
 
+import jdbc_example.pojo.Student;
+
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 //Взяв за основу пример, написать программу, которая выводит всех учеников, относящихся к конкретному классу,
 //а также рассчитывает средний балл всех учеников в этом классе.
@@ -16,7 +21,7 @@ public class PreparedStatementExample {
             System.out.println("No postgres driver");
             return;
         }
-        String selectRequest = "INSERT INTO students (student_id, name, last_name, class_id, average_grade) VALUES (?, ?, ?, ?, ?)";
+        String selectRequest = "INSERT INTO students ( name, last_name, average_grade) VALUES ( ?, ?, ?)";
 
         try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
              Statement statement = connection.createStatement();
@@ -24,31 +29,27 @@ public class PreparedStatementExample {
 
             System.out.println("Select and put into Object:");
 
-//            ResultSet resultSet = selectFromDB(statement, "students", "student_id", "name", "last_name", "average_grade");
-//            List<Student> students = new ArrayList<>();
-//            while (resultSet.next()) {
-//                int studentId = Integer.parseInt(resultSet.getString("student_id"));
-//                String name = resultSet.getString("name");
-//                String lastName = resultSet.getString("last_name");
-//                double averageGrade=Double.parseDouble(resultSet.getString("average_grade"));
-//                students.add(new Student(studentId,name,lastName,averageGrade));
-//            }
-//            for (Student student : students) {
-//                System.out.println(student);
-//            }
+            ResultSet resultSet = selectFromDB(statement, "students", "id", "name", "last_name", "average_grade");
+            List<Student> students = new ArrayList<>();
+            while (resultSet.next()) {
+                int studentId = Integer.parseInt(resultSet.getString("id"));
+                String name = resultSet.getString("name");
+                String lastName = resultSet.getString("last_name");
+                double averageGrade = Double.parseDouble(resultSet.getString("average_grade"));
+                students.add(new Student(studentId, name, lastName, averageGrade));
+            }
+            for (Student student : students) {
+                System.out.println(student);
+            }
             System.out.println("--------------------------------------------------");
             System.out.println("Insert new student");
-            int id = 21;
             String name = "Witya";
             String lastName = "Ivanov";
-            int classId = 10;
             double averageGrade = 8.8;
             //параметры передаются в таком же порядке как указано в таблице
-            preparedStatement.setInt(1, id);
-            preparedStatement.setString(2, name);
-            preparedStatement.setString(3, lastName);
-            preparedStatement.setInt(4, classId);
-            preparedStatement.setDouble(5, averageGrade);
+            preparedStatement.setString(1, name);
+            preparedStatement.setString(2, lastName);
+            preparedStatement.setDouble(3, averageGrade);
             preparedStatement.executeUpdate();
 
 
@@ -57,11 +58,12 @@ public class PreparedStatementExample {
             e.printStackTrace();
         }
     }
-//              ТАК ЛУЧШЕ НЕ ДЕЛАТЬ!!! Не безопасно!!!
-//    private static ResultSet selectFromDB(Statement statement, String tableName, String... columns) throws SQLException {
-//        String req = Arrays.toString(columns);
-//        String strStatement = "SELECT " + req.substring(1, req.length() - 1) + " FROM " + tableName;
-//        System.out.println(strStatement);
-//        return statement.executeQuery(strStatement);
-//    }
+
+    //              ТАК ЛУЧШЕ НЕ ДЕЛАТЬ!!! Не безопасно!!!
+    private static ResultSet selectFromDB(Statement statement, String tableName, String... columns) throws SQLException {
+        String req = Arrays.toString(columns);
+        String strStatement = "SELECT " + req.substring(1, req.length() - 1) + " FROM " + tableName;
+        System.out.println(strStatement);
+        return statement.executeQuery(strStatement);
+    }
 }

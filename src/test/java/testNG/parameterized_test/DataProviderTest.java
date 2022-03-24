@@ -29,9 +29,11 @@ public class DataProviderTest {
         };
     }
 
-    @Test(dataProvider = "data2")
+    @Test(dataProvider = "data1")
     public void test(int a, int b, int c) {
         System.out.println(this);
+        long id = Thread.currentThread().getId();
+        System.out.println("Test method executing on thread with id: " + id);
         assertEquals(a + b, c, "Incorrect operation result");
     }
 
