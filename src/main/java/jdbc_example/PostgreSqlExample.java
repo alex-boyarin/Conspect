@@ -18,9 +18,9 @@ public class PostgreSqlExample {
         }
         try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
              Statement statement = connection.createStatement()) {
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM students ORDER BY student_id DESC");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM students ORDER BY id DESC");
             while (resultSet.next()) {
-                System.out.println(resultSet.getString("student_id") + " " +
+                System.out.println(resultSet.getString("id") + " " +
                                    resultSet.getString("name") + " " +
                                    resultSet.getString("last_name") + " " +
                                    resultSet.getString("average_grade"));

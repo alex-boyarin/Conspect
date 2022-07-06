@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="17" class="java.beans.XMLDecoder">
+ <object class="javaCore.classesDemo.javaBeansDemo.JavaBeanDemo">
+  <void property="orderId">
+   <long>250986</long>
+  </void>
+  <void property="yearOld">
+   <int>35</int>
+  </void>
+ </object>
+</java>

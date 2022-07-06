@@ -2,7 +2,7 @@ package javaCore.classesDemo.anonymusClass;
 
 public class AnonimClass2 {
     public static void main(String[] args) {
-        InterfaceAnon interfaceAnon = () -> System.out.println("interface");
+        InterfaceAnonym interfaceAnonym = () -> System.out.println("interface");
 
 
 //        //@Override

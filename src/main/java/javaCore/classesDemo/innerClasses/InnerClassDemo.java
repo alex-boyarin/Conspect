@@ -19,7 +19,7 @@ public class InnerClassDemo {
      * 3 - он не может обьявлять static логические блоки.
      */
     public class Address {
-        // private static String country;--ОШИБКА static недопустим!!!
+        // private static String country;   --     ОШИБКА static недопустим!!!
         private String city;
         private String street;
         private int houseId;
@@ -28,14 +28,14 @@ public class InnerClassDemo {
         private String skype;
         private long phoneNumber;
 
-        //static {};--ОШИБКА static недопустим!!!
+        //static {};        --      ОШИБКА static недопустим!!!
 
         public Address() {
         }
 
-        //   public static void action() {};--ОШИБКА static недопустим!!!
+        //public static void action() {};    --      ОШИБКА static недопустим!!!
         public void action() {
-            group = 101;// внутренний класс видит все поля внешнего класса даже если они privat
+            group = 101;//внутренний класс видит все поля внешнего класса даже если они privat
         }
     }
 
@@ -43,7 +43,7 @@ public class InnerClassDemo {
     }
 
     public void operation() {
-        address.city = "kiiv";//Внешний класс может обращаться к полям внутренеего класса
+        address.city = "Kiiv";//Внешний класс может обращаться к полям внутренеего класса
         //только через создание обьекта.
     }
 }

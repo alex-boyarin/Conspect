@@ -14,14 +14,14 @@ import java.util.Objects;
  */
 public class JavaBeanDemo implements Serializable {
     private long orderId;
-    private double amount;//amount-количество
+    private int yearOld;
 
     public JavaBeanDemo() {
     }
 
-    public JavaBeanDemo(long orderId, double amount) {
+    public JavaBeanDemo(long orderId, int yearOld) {
         this.orderId = orderId;
-        this.amount = amount;
+        this.yearOld = yearOld;
     }
 
     public long getOrderId() {
@@ -32,12 +32,12 @@ public class JavaBeanDemo implements Serializable {
         this.orderId = orderId;
     }
 
-    public double getAmount() {
-        return amount;
+    public int getYearOld() {
+        return yearOld;
     }
 
-    public void setAmount(double amount) {
-        this.amount = amount;
+    public void setYearOld(int yearOld) {
+        this.yearOld = yearOld;
     }
 
     @Override
@@ -45,19 +45,19 @@ public class JavaBeanDemo implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         JavaBeanDemo that = (JavaBeanDemo) o;
-        return orderId == that.orderId && Double.compare(that.amount, amount) == 0;
+        return orderId == that.orderId && yearOld == that.yearOld;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(orderId, amount);
+        return Objects.hash(orderId, yearOld);
     }
 
     @Override
     public String toString() {
         return "JavaBeanDemo{" +
-                "orderId=" + orderId +
-                ", amount=" + amount +
-                '}';
+               "orderId=" + orderId +
+               ", yearOld=" + yearOld +
+               '}';
     }
 }

@@ -1,34 +1,38 @@
 package javaCore.classesDemo.abstractClass;
-
+/*
+Абстрактный класс подобно каркасу для наших объектов который в последующем
+мы будем использовать и наращивать его, более того абстрактные классы уже содержат
+какое-то состояние т.е. какой-то набор полей.
+ */
 public abstract class AbstractComputer {
-    private Ssd1 ssd1;
-    private Ram1 ram1;
+    private Ssd ssd;
+    private Ram ram;
 
-    public AbstractComputer(Ssd1 ssd1, Ram1 ram1) {
-        this.ssd1 = ssd1;
-        this.ram1 = ram1;
+    public AbstractComputer(Ssd ssd, Ram ram) {
+        this.ssd = ssd;
+        this.ram = ram;
     }
 
     public abstract void load();
 
     public void print() {
-        System.out.println("ssd " + ssd1.getValue() + ", ram " + ram1.getValue());
+        System.out.println("ssd " + ssd.getValue() + ", ram " + ram.getValue());
     }
 
 
-    public Ssd1 getSsd1() {
-        return ssd1;
+    public Ssd getSsd() {
+        return ssd;
     }
 
-    public void setSsd1(Ssd1 ssd1) {
-        this.ssd1 = ssd1;
+    public void setSsd(Ssd ssd) {
+        this.ssd = ssd;
     }
 
-    public Ram1 getRam1() {
-        return ram1;
+    public Ram getRam() {
+        return ram;
     }
 
-    public void setRam1(Ram1 ram1) {
-        this.ram1 = ram1;
+    public void setRam(Ram ram) {
+        this.ram = ram;
     }
 }
