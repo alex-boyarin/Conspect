@@ -1,25 +1,24 @@
 package javaCore.colectionDemo.comparableDemo;
-/*
- * Для того чтобы не возникло ошибки времени выполнения нужно имплементировать интерфейс Comparable,
- * и реализовать его метод.
- */
-public class Person1 implements Comparable<Person1> {
+
+/* Для того чтобы не возникло ошибки времени выполнения нужно имплементировать интерфейс Comparable,
+ * и реализовать его метод. */
+public class Person implements Comparable<Person> {
     private String name;
     private int id;
 
-    public Person1() {
+    public Person() {
 
     }
 
-    public Person1(int id) {
+    public Person(int id) {
         this.id = id;
     }
 
-    public Person1(String name) {
+    public Person(String name) {
         this.name = name;
     }
 
-    public Person1(String name, int id) {
+    public Person(String name, int id) {
         this.name = name;
         this.id = id;
     }
@@ -50,7 +49,7 @@ public class Person1 implements Comparable<Person1> {
     }
 
     @Override
-    public int compareTo(javaCore.colectionDemo.comparableDemo.Person1 o) {
+    public int compareTo(Person o) {
 //        int result = -(id - o.id);// если поставить знак минус перед уравнением то сортировка будет по убыванию.
 //        int value = 0;
 //        if (result > 0) {
@@ -59,6 +58,7 @@ public class Person1 implements Comparable<Person1> {
 //            value = -1;
 //        }
 //        return value;
-        return name.compareTo(o.name);// Сортировка по имени.
+        return Integer.valueOf(id).compareTo(o.id);// Сортировка по id, для сортировки примитивов их нужно обернуть.
+        // return name.compareTo(o.name);//сортировка по имени.
     }
 }

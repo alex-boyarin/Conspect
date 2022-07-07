@@ -2,9 +2,9 @@ package javaCore.colectionDemo.comparatorDemo;
 
 import java.util.Comparator;
 
-public class NamePersonComparator implements Comparator<Person2> {
+public class NamePersonComparator implements Comparator<Person> {
     @Override
-    public int compare(Person2 o1, Person2 o2) {
+    public int compare(Person o1, Person o2) {
         return o1.getName().compareTo(o2.getName());
     }
 }
