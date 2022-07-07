@@ -1,6 +1,6 @@
 package javaCore.colectionDemo.genericInColectionDemo;
 
-public class Student extends Person3 {
+public class Student extends Person {
     private String faculty;
     private int yearOfStudy;
 

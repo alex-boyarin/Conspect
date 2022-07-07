@@ -1,10 +1,10 @@
 package javaCore.javaIO.serializationDemo;
 
-import javaCore.colectionDemo.genericInColectionDemo.Person3;
+import javaCore.colectionDemo.genericInColectionDemo.Person;
 
 import java.io.Serializable;
 
-public class Student extends Person3 implements Serializable {
+public class Student extends Person implements Serializable {
     static String faculty = "MMF2";
     private String name;
     private int id;

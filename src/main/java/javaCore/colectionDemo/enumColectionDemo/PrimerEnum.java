@@ -1,9 +1,10 @@
-package javaCore.colectionDemo.enumDemo;
+package javaCore.colectionDemo.enumColectionDemo;
 
-public enum PrimerEnum {//   // Almaz_7788, Stolitsa_135, Vip_107, chrystal_7778, TaxiCargo_163-так нельзя обьявлять перечисления
-    //    ALMAZ(7788), STOLITSA(135), VIP(107), CHRYSTAL(7778), TAXI_CARGO(163);
+public enum PrimerEnum {
+    // Almaz_7788, Stolitsa_135, Vip_107, chrystal_7778, TaxiCargo_163 - Tак нельзя обьявлять перечисления!!!
+    // ALMAZ(7788), STOLITSA(135), VIP(107), CHRYSTAL(7778), TAXI_CARGO(163);
 //    private int phoneNumber;
-//
+
 //    PrimerEnum(int phoneNumber) {
 //        this.phoneNumber = phoneNumber;
 //    }
@@ -16,7 +17,7 @@ public enum PrimerEnum {//   // Almaz_7788, Stolitsa_135, Vip_107, chrystal_7778
  * Создаем перечисление PlaneProducer{
  * AIRBUS, BOEING
  * }
- * Далее создаем отдельный класс, в котором содержится переменая типа производит. самолетов,
+ * Далее создаем отдельный класс, в котором содержится переменная типа производит. самолетов,
  * и поле модели самолетов
  * Plane{
  * privat PlaneProducer producer;

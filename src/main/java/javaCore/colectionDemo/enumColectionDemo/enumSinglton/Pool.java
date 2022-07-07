@@ -1,6 +1,6 @@
-package javaCore.colectionDemo.enumDemo.enumSinglton;
+package javaCore.colectionDemo.enumColectionDemo.enumSinglton;
 
-import javaCore.colectionDemo.enumDemo.Plane;
+import javaCore.colectionDemo.enumColectionDemo.Plane;
 
 import java.util.concurrent.BlockingQueue;
 

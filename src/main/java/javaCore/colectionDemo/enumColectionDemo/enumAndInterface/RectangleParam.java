@@ -1,4 +1,4 @@
-package javaCore.colectionDemo.enumAndInterface;
+package javaCore.colectionDemo.enumColectionDemo.enumAndInterface;
 
 public enum RectangleParam implements ShapeService {
     PERIMETER {

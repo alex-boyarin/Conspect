@@ -1,4 +1,4 @@
-package javaCore.colectionDemo.enumDemo.enumSet;
+package javaCore.colectionDemo.enumColectionDemo.enumSet;
 
 public enum Country {
     ARMENIA(3, 28470),
@@ -15,7 +15,7 @@ public enum Country {
         this.landArea = landArea;
     }
 
-    public void grow(int additionalPopulation) {//grow -расти
+    public void grow(int additionalPopulation) {//grow - расти
         population += additionalPopulation;
     }
 

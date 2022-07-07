@@ -28,11 +28,14 @@ public class FunctionIteratorDemo {
         System.out.println(orders);
         float bigAmount = 10;
         int percent = 5;
-        orders.removeIf(order -> order.getAmount() <= bigAmount);/*Метод  removeIf()-принимает предикат, который и задает условия.
-        Предикат принимает текущий обьект колекция. order.getAmount() <= bigAmount- все обьекты для которых это условие будет true
+          /*Метод removeIf()-принимает предикат, который и задает условия.
+        Предикат принимает текущий объект коллекция. order.getAmount() <= bigAmount- все объекты для которых это условие будет true
         будут удалены */
-        orders.forEach(order -> order.setAmount(order.getAmount() * (100 - percent) / 100));/* здесь уже передается другой функцИнтерфейс
-        Consumer который будет выполнять действия над текущим элементом. Передается в качестве значения текущий обьект order */
+        orders.removeIf(order -> order.getAmount() <= bigAmount);
+
+        /* Здесь уже передается другой функцИнтерфейс Consumer который будет выполнять действия над текущим элементом.
+         Передается в качестве значения текущий объект order */
+        orders.forEach(order -> order.setAmount(order.getAmount() * (100 - percent) / 100));
         System.out.println(orders);
     }
 }

@@ -1,4 +1,4 @@
-package javaCore.colectionDemo.enumDemo.oldStyleIdeomEnum;
+package javaCore.colectionDemo.enumColectionDemo.oldStyleIdeomEnum;
 
 public class SeasonDay {
     public static final int WINTER = 0;

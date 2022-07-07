@@ -1,4 +1,4 @@
-package javaCore.colectionDemo.enumDemo;
+package javaCore.colectionDemo.enumColectionDemo;
 
 public class Plane {
     private PrimerEnum primerEnum;

@@ -1,4 +1,4 @@
-package javaCore.colectionDemo.enumDemo.oldStyleIdeomEnum;
+package javaCore.colectionDemo.enumColectionDemo.oldStyleIdeomEnum;
 
 public class LearnMainEnum {
     public static void main(String[] args) {

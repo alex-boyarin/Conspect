@@ -1,6 +1,6 @@
 package javaCore.colectionDemo.wildCardDemo;
 
-import javaCore.colectionDemo.genericInColectionDemo.Person3;
+import javaCore.colectionDemo.genericInColectionDemo.Person;
 import javaCore.colectionDemo.genericInColectionDemo.Student;
 
 import java.util.ArrayList;
@@ -12,8 +12,8 @@ import java.util.stream.Stream;
  */
 public class WildCardDemo {
     public static void main(String[] args) {
-        List<Person3> list = new ArrayList<>();
-        list.add(new Person3());
+        List<Person> list = new ArrayList<>();
+        list.add(new Person());
         //list.add(new Student());
         action(list);
         List<Student> students = new ArrayList<>();
@@ -26,10 +26,10 @@ public class WildCardDemo {
     для этого следует использовать символ "?"- этот символ обозначает что любой подкласс от супер класс
     может передаваться в метод
      */
-    static void action(List<? extends Person3> list) {
+    static void action(List<? extends Person> list) {
         list.remove(0);//удалять можно.
         //list.add(new Person()) //добавлять нельзя.
-        Stream<? extends Person3> stream = list.stream();//так же такой список может быть преобразован
+        Stream<? extends Person> stream = list.stream();//так же такой список может быть преобразован
         // в Stream но параметризация должна точно совпадать с параметризацией списка.
     }
 }
