@@ -4,7 +4,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public final class PropertiesUtil {
+public final class PropertiesUtil {// Утилитный класс поэтому private
+
+    /*Для представления properties файлов имеется такой класс он наследуется от Hashtable. Теперь после создания
+    * объекта new Properties() нужно загрузить в него данные из нашего файла*/
     public static final Properties PROPERTIES = new Properties();
 
     static {

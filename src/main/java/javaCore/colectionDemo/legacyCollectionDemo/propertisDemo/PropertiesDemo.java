@@ -18,7 +18,7 @@ public class PropertiesDemo {
         try (InputStream inputStream = PropertiesDemo.class.getClassLoader().getResourceAsStream(filename)) {
             properties.load(inputStream);// Можно загрузить сразу файл.
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
         return properties;
     }

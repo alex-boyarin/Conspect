@@ -15,9 +15,9 @@ public class LinkedHashMapDemo {
         Person petr = new Person(29, "petr", "petrov");
         Person sveta = new Person(3, "sveta", "svetikova");
         Map<Integer, Person> map = new LinkedHashMap<>();
-        map.put(ivan.getId(), ivan);
+        map.put(ivan.getId(), ivan);//кладем в коллекцию
         map.put(petr.getId(), petr);
-        map.putIfAbsent(sveta.getId(), sveta);
+        map.putIfAbsent(sveta.getId(), sveta);//положить если отсутствует.
         for (Map.Entry<Integer, Person> entry : map.entrySet()) {
             System.out.println(entry.getKey() + " " + entry.getValue());
         }

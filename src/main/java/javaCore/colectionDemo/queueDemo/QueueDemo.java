@@ -21,10 +21,10 @@ public class QueueDemo {
         //queue.clear();//очистка очереди.
         //queue.remove();// проверка генерирует ли метод exception
         //queue.element();//проверка генерирует ли метод exception
-        queue.removeIf(s -> s.endsWith("t"));// С помощью этого метода можно удалить элем. заканчивающийся на определеное значение.
+        queue.removeIf(s -> s.endsWith("t"));// С помощью этого метода можно удалить элем. заканчивающийся на определенное значение.
         queue.forEach(System.out::println);
         queue.add("T-shirt");
-        queue.stream().filter(s -> !s.endsWith("t")).forEach(System.out::println);  // Сделаем теже действия с помощью Stream-поток.
+        queue.stream().filter(s -> !s.endsWith("t")).forEach(System.out::println);  // Сделаем те же действия с помощью Stream-поток.
         // Поток удобен тем что он не меняет очередь, и при выводе исходного списка, он будет полной. А Стандартные методы меняют
         //очередь.
         queue.forEach(System.out::println);
