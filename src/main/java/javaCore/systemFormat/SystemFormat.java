@@ -3,10 +3,12 @@ package javaCore.systemFormat;
 import java.text.DecimalFormat;
 import java.util.Date;
 
+import static java.lang.String.format;
+
 public class SystemFormat {
     public static void main(String[] args) {
-        System.out.printf("Привет %n Привет");// Разделитель строк для конкретной платформы. Аналог \n
-        System.out.printf("Привет %s!%n", "мир");// Любой тип, который будет приведен к строке.
+        System.out.printf("Привет %n Привет %n");// Разделитель строк для конкретной платформы. Аналог \n
+        System.out.printf("Привет %s%n", "мир");// Любой тип, который будет приведен к строке.
         System.out.printf("Привет %b!%n", null);/* Любой тип, который будет приведен к boolean:
         true — если значение не null, false — если null*/
         System.out.printf("Привет %h!%n", "мир");/* Можно передавать любой объект,
@@ -16,16 +18,16 @@ public class SystemFormat {
         System.out.printf("Число ПИ равно -  %f!%n", 3.14159);// Используется для задания числа с плавающей запятой
         System.out.printf("Число ПИ равно -  %e!%n", 3.14159);// Числа с плавающей запятой в экспоненциальном представлении
         System.out.printf("Число ПИ равно -  %a!%n", 3.14159);// Числа с плавающей запятой будут представлены в шестнадцатеричном виде
-        System.out.printf("Мне уже %x!%n", 25);/* Передается целое число (int. byte, short, int, long, BigInteger),
+        System.out.printf("Мне уже %x%n", 25);/* Передается целое число (int. byte, short, int, long, BigInteger),
         результатом форматирования будет символ под данным номером в таблице ASCII*/
         System.out.printf("Мне уже %o!%n", 25);/* Принимается целое число (int. byte, short, int, long, BigInteger),
         которое будет представлено в виде восьмеричного числа */
         System.out.printf("Сегодня %tA%n", new Date());/* Префикс для преобразований даты и времени.
         Для форматирования требуются дополнительные флаги*/
         System.out.printf("Расстояние от Киева до Одессы - %4.6f." +
-                " Не так уж и мало, не правда ли?  %n", 475.4d);
+                          " Не так уж и мало, не правда ли?  %n", 475.4d);
         System.out.printf("Расстояние от Киева до Одессы - %.2f." +
-                " Не так уж и мало, не правда ли? %n ", 475.4d);
+                          " Не так уж и мало, не правда ли? %n ", 475.4d);
         //DecimalFormat decimalFormat = new DecimalFormat("#.###");
         double value = 72.224463;
         //System.out.println(decimalFormat.format(value));
@@ -35,11 +37,18 @@ public class SystemFormat {
         System.out.printf("%4d%n", 2);
         System.out.printf("%4d%n", 21);
         System.out.printf("%4d%n", 211);
-        System.out.printf("%5d%n", 2113);
+        System.out.printf("%4d%n", 2113);
         System.out.printf("%10s", "1234567890 gggggg");
+        System.out.println(" ");
 //        Scanner scanner=new Scanner(System.in);
 //        double ff=scanner.nextDouble();
 //        System.out.println(ff);
+        System.out.println(format("%4$S %3$s %2$s %1$s %4$s %3$s %2$s %1$S",
+                "a", "b", "C", "d"));
+        System.out.println(format("Мне нужно исправить %.2f, ошибки.", 476578.09876));
 
+        Date today = new Date() ;
+        String.format("%tA, %<tB %<td",today);//< угловая скобка означает что один аргумент будет использоваться
+        //несколько раз. Это нужно чтобы не дублировать аргументы.
     }
 }

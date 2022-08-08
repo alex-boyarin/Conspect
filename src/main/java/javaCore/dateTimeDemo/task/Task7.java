@@ -6,7 +6,7 @@ import java.time.ZonedDateTime;
 
 /*
  * Создать обьект Instant. Вывести его на консоль. Затем создать обьект ZonedDateTime
- * на основании предыдущего обьекта  с тайм зоной "Africa/Cairo".
+ * на основании предыдущего обьекта с тайм зоной "Africa/Cairo".
  */
 public class Task7 {
     public static void main(String[] args) {

@@ -6,8 +6,7 @@ public class LamdaExample {
     public static void main(String[] args) {
 //        Comparator<Integer> comparator = new IntegerComparator();
 //        System.out.println(comparator.compare(25, 100));
-        /**будем использовать лямда выражения
-
+        /*будем использовать лямда выражения
          так же мы уберем и тип из скобок, т.к. наш Comparator<Integer> уже параметризован*/
         // Comparator<Integer> comparator=(Integer o1, Integer o2)->{
         //   return Integer.compare(o1, o2);

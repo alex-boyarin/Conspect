@@ -12,20 +12,20 @@ import java.time.temporal.ChronoUnit;
 public class Task5 {
     public static void main(String[] args) {
         LocalDate localDate = LocalDate.now();//текущая дата
-        LocalDate prevDate = LocalDate.of(2018, 7, 7);// а сдесь мы создаем конкретную дату
+        LocalDate prevDate = LocalDate.of(2020, 1, 1);// а здесь мы создаем конкретную дату
 
-        /* Period позволяет найти  год, месяц, день между 2мя датами
+        /* Period позволяет найти год, месяц, день между 2мя датами
         Duration позволяет найти с точностью до долей секунд
          */
         Period period = Period.between(prevDate, localDate);//этот метод позволяет нам находить год, месяц, день между 2мя датами
-        System.out.println(period.getYears() + "\n" +
-                period.getMonths() + "\n" +
-                period.getDays());
-/*
-Если нам необходимо посчитать кол-во именно дней между двумя точками,
- то тогда воспользуемся ChronoUnit.DAYS и у него воспользуемся методом between() и передать в
- него любые 2 Temporal
- */
+        System.out.println(period.getYears() + " Years.\n" +
+                           period.getMonths() + " Months.\n" +
+                           period.getDays() + " Days.");
+    /*
+    Если нам необходимо посчитать кол-во именно дней между двумя точками,
+     то тогда воспользуемся ChronoUnit.DAYS и у него воспользуемся методом between() и передать в
+     него любые 2 Temporal
+     */
         long between = ChronoUnit.DAYS.between(prevDate, localDate);
         System.out.println(between);
     }
